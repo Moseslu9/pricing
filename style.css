@@ -376,32 +376,39 @@ hr {
   margin-bottom: 24px;
 }
 
-.offer-box {
-  display: flex;
-  font-size: 12px;
-  flex-direction: column;
-  align-items: center;
-  gap: 11px;
-  line-height: 1.5px;
-}
-.offer-box div{
-    display: flex;
+.offers-box{
+    width:100%;
+    display:flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
-}
-
-.offer-box img{
-    margin-right: 16px;
-}
-
-@media (min-width:768px) {
-    .offer-box{
+    gap:32px;
+    margin-bottom:32px;/* just to check overall precision vertically. now it's -1px inside the card :)*/
+  }
+  .offers {
+    font-size: 12px;
+    line-height: 16px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:11px;
+  }
+  .offers div{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+  }
+  .offers img{
+    margin-right:16px;
+  }
+  
+  @media (min-width:768px) {
+    .offers-box{
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
       gap:unset;
     }
-    .offer {
+    .offers {
       align-items: flex-start;
     }
     hr{
@@ -409,7 +416,7 @@ hr {
       margin-bottom:32px;
     } 
   }
-
+  
 
 
   button {
